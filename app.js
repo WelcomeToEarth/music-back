@@ -13,6 +13,8 @@ var usersRouter = require('./routes/users');
 var singerRouter = require('./routes/singer');
 var ablumRouter = require('./routes/ablum')
 
+//  移动端接口 terminal
+var api = require('./routes/api')
 
 var app = express();
 
@@ -39,6 +41,7 @@ app.use('/user', usersRouter);
 // app.use("/books",booksRouter)
 app.use('/singer', singerRouter);
 app.use('/ablum', ablumRouter);
+app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
